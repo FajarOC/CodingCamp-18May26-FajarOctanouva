@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard - aku</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link" style="position: absolute; top: -40px; left: 0; background: #059669; color: white; padding: 8px; z-index: 100; transition: top 0.2s;">Skip to content</a>
+
+    <nav class="top-nav" aria-label="Theme Customization">
+        <div class="nav-container">
+            <span class="brand-logo">🌿 EmeraldDash</span>
+            <div class="theme-switch-wrapper">
+                <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <header class="header-section">
+            <div class="clock-box">
+                <div class="time-display" id="time-text" aria-live="off">00:00:00</div>
+                <div class="date-display" id="date-text">Loading Date...</div>
+            </div>
+            <div class="greeting-container">
+                <span id="greeting-text">Selamat datang,</span>
+                <div class="name-input-wrapper">
+                    <input type="text" id="name-input" value="Fajar" placeholder="Nama Anda" autocomplete="off" maxlength="15" aria-label="Edit nama panggilan">
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content" class="dashboard-grid">
+            
+            <section class="dashboard-card todo-section" aria-labelledby="todo-heading">
+                <div class="todo-header">
+                    <h2 id="todo-heading">Tasks <span id="task-counter" class="task-badge" aria-label="Jumlah tugas aktif">(0)</span></h2>
+                    <button id="btn-clear-all" class="btn-clear-all" aria-label="Hapus semua tugas">Clear All</button>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="todo-input" placeholder="Tambah tugas baru..." aria-label="Input tugas baru">
+                    <button id="btn-add-todo" class="btn-primary">Add</button>
+                </div>
+                
+                <ul id="task-list" class="task-list" aria-live="polite">
+                    </ul>
+            </section>
+
+            <section class="dashboard-card timer-section" aria-labelledby="timer-heading">
+                <div class="card-header">
+                    <h2 id="timer-heading">Focus Timer</h2>
+                </div>
+                <div class="timer-body">
+                    <div class="timer-countdown" id="timer-display" aria-live="assertive">25:00</div>
+                    <div class="timer-controls">
+                        <button id="btn-timer-start" class="btn-success">Start</button>
+                        <button id="btn-timer-reset" class="btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-card links-section" aria-labelledby="links-heading">
+                <div class="card-header">
+                    <h2 id="links-heading">Quick Links Shortcuts</h2>
+                </div>
+                
+                <div class="input-group links-input-group">
+                    <input type="text" id="link-name-input" placeholder="Nama Situs (cth: Google)" aria-label="Nama situs">
+                    <input type="url" id="link-url-input" placeholder="URL (https://...)" aria-label="Alamat URL">
+                    <button id="btn-add-link" class="btn-primary">Add Link</button>
+                </div>
+                
+                <div id="links-container" class="links-container">
+                    </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Life Dashboard Pro &bull; Built for Fajar &bull; Optimized for Performance &amp; Accessibility</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
